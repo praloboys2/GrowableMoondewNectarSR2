@@ -13,7 +13,7 @@ using Object = UnityEngine.Object;
 [assembly: MelonGame("MonomiPark", "SlimeRancher2")]
 namespace GrowableMoondewNectarMod
 {
-    [HarmonyPatch(typeof(GardenCatcher), nameof(GardenCatcher.Awake))]
+    [HarmonyPatch(typeof(Il2Cpp.GardenCatcher), nameof(Il2Cpp.GardenCatcher.Awake))]
     public static class PatchGardenCatcherAwake
     {
         public static void Prefix(GardenCatcher __instance)
@@ -29,7 +29,7 @@ namespace GrowableMoondewNectarMod
         }
     }
 
-    [HarmonyPatch(typeof(AutoSaveDirector), nameof(AutoSaveDirector.Awake))]
+    [HarmonyPatch(typeof(Il2CppMonomiPark.SlimeRancher.AutoSaveDirector), nameof(Il2CppMonomiPark.SlimeRancher.AutoSaveDirector.Awake))]
     public static class PatchAutoSaveDirectorAwake
     {
         public static void Prefix()
